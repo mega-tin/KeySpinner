@@ -1,0 +1,8 @@
+## Interface: 120001
+## Title: KeySpinner
+## Notes:  Pick a key, any key!
+## Author: Megatin
+## Version: 1.0
+
+embeds.xml
+KeySpinner.lua
