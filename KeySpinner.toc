@@ -2,7 +2,7 @@
 ## Title: KeySpinner
 ## Notes:  Pick a key, any key!
 ## Author: Megatin
-## Version: 1.0
+## Version: @project-version@
 
 embeds.xml
 KeySpinner.lua
