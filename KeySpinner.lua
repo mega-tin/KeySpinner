@@ -308,7 +308,7 @@ function KeySpinner:ResultsUpdate(deltaTime)
 
             -- Send result to chat
             if UnitIsGroupLeader("player") then
-                local Winner = self.SpinTable.Options[spin.Selected]
+                local Winner = self.SpinTable.Options[self.SpinTable.Selected]
                 SendChatMessage(string.format("We have a winner! %s's %s", Winner.Name, Winner.Key), "PARTY")
             end
 
