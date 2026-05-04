@@ -1,4 +1,4 @@
-## Interface: 120001
+## Interface: 120005
 ## Title: KeySpinner
 ## Notes:  Pick a key, any key!
 ## Author: Megatin

@@ -105,6 +105,12 @@ end
 -----------------------------------------------------------------------
 function KeySpinner:NewKeyData(playerName, keyMapID, keyLevel)
     KeyName = C_ChallengeMode.GetMapUIInfo(keyMapID)
+    if (not KeyName) then
+        KeyName = "???"
+    end
+    if (not keyLevel) then
+        keyLevel = "?"
+    end
     self.KeyData[playerName] = KeyName .. " +" .. keyLevel
     self:UpdateKeyList()
 end
@@ -126,6 +132,10 @@ function KeySpinner:UpdateKeyList()
             self.CheckBoxes[i].text:SetText(name .. " - " .. key)
             self.CheckBoxes[i]:SetChecked(true)
             self.CheckBoxes[i]:Show()
+        else
+            self.CheckBoxes[i].text:SetText("")
+            self.CheckBoxes[i]:SetChecked(false)
+            self.CheckBoxes[i]:Hide()
         end
     end
 end
@@ -208,8 +218,6 @@ function KeySpinner:OnCommReceived(prefix, message, distribution, sender)
 
 
 end
-
-
 
 -----------------------------------------------------------------------
 -- ResultsUpdate - ResultsFrame's OnUpdate handler.
